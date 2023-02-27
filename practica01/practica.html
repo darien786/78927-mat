@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<p id="demo"></p>
+
+
+<script>
+    var parser, xmlDOC, emisor, receptor;
+    var text = '<cfdi:Emisor> Rfc="FUJJ870205DH0" Nombre="JORGE ALBERTO FUENTES DE JESUS" RegimenFiscal="612"</cfdi:Emisor>'+
+    '<cfdi:Receptor Rfc="UAC750417LE8" Nombre="UNIVERSIDAD AUTONOMA DE CHIAPAS" UsoCFDI="G03"></cfdi:Receptor>';
+
+    parser = new DOMParser();
+
+    xmlDOC= parser.parseFromString(text,"text/xml");
+
+
+    document.getElementById("demo") = xmlDOC.getElementsByTagName("cdfi:Emisor")[0].childNodes[0].nodeValue;
+    
+
+</script>
+
+</body>
+</html>
