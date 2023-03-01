@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rzsiRjYfpRSP18/Hml9yN89/KJ1hhaDr5v4oVp3Oi6UZWfXZ4yUoKfL8cXwJHRnxmkqyWTBFJpVm1WQEegcVXg==",
+  "dgSpecHash": "df5vu/EmMVmBB1RPJt5mM1K6ogEU0piyV7QXnnFkisdJ96iQzZqmr8yYxyN0lbMWwbNwkwNkYveLjE0BanRymQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\practica02.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\practica02.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

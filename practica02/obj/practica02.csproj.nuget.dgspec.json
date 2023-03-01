@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\practica02.csproj": {}
+    "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\practica02.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\practica02.csproj": {
+    "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\practica02.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\practica02.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\practica02.csproj",
         "projectName": "practica02",
-        "projectPath": "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\practica02.csproj",
+        "projectPath": "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\practica02.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Documents\\Semestre 6\\Tecnologias para la integracion de soluciones\\practicas\\practica02\\practica02\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\Desktop\\78927-mat\\78927-mat\\practica02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
