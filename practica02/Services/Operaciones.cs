@@ -5,6 +5,9 @@ namespace WSDL.operaciones{
     
     public class Operaciones : Mensajes{
 
+
+        //connet base and dates?
+        
         private string[] mensajes = new string[4];
 
         public string Saludar(string nombre){
