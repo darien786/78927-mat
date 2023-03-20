@@ -18,7 +18,7 @@
   <xs:element name="BuscarRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="indice" type="xs:int" />
+        <xs:element name="posicion" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -32,7 +32,7 @@
   <xs:element name="ModificarRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="indice" type="xs:int" />
+        <xs:element name="posicion" type="xs:int" />
         <xs:element name="nombre" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
@@ -47,7 +47,7 @@
   <xs:element name="EliminarRequest">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="indice" type="xs:int" />
+        <xs:element name="posicion" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

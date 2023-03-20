@@ -20,8 +20,8 @@ public class EndPoint{
     protected String[] myArray = new String[10];
 
 
-    public boolean estaVacia(String[] array, int indice){
-        return array[indice] == null;
+    public boolean estaVacia(String[] array, int posicion){
+        return array[posicion] == null;
     }
 
     //saludar, buscar saludos, modificar saludo, borrar saludo
@@ -41,10 +41,10 @@ public class EndPoint{
 
     @PayloadRoot (localPart="BuscarRequest", namespace="https://t4is.uv.mx/saludos")
     @ResponsePayload
-    public BuscarResponse Buscar(@RequestPayload BuscarRequest indice){
+    public BuscarResponse Buscar(@RequestPayload BuscarRequest posicion){
         BuscarResponse respuesta = new BuscarResponse();
-        if(!estaVacia(myArray,indice.getIndice())){
-            respuesta.setRespuesta("Hola " + myArray[indice.getIndice()].toString() + ", mucho gusto");
+        if(!estaVacia(myArray,posicion.getPosicion())){
+            respuesta.setRespuesta("Hola " + myArray[posicion.getPosicion()].toString() + ", mucho gusto");
         }else if(estaVacia(myArray, 0)){
             respuesta.setRespuesta("La lista de saludos esta vacia");
         }else{
@@ -55,10 +55,10 @@ public class EndPoint{
 
     @PayloadRoot (localPart="ModificarRequest", namespace="https://t4is.uv.mx/saludos")
     @ResponsePayload
-    public ModificarResponse Modificar(@RequestPayload ModificarRequest indice, @RequestPayload ModificarRequest peticion){
+    public ModificarResponse Modificar(@RequestPayload ModificarRequest posicion, @RequestPayload ModificarRequest peticion){
     ModificarResponse respuesta = new ModificarResponse();
-    if(!estaVacia(myArray, indice.getIndice())){
-        myArray[indice.getIndice()] = peticion.getNombre();
+    if(!estaVacia(myArray, posicion.getPosicion())){
+        myArray[posicion.getPosicion()] = peticion.getNombre();
         respuesta.setRespuesta("Saludo Modificado");
     }else{
         respuesta.setRespuesta("No se encontro");
@@ -68,10 +68,10 @@ public class EndPoint{
     
     @PayloadRoot (localPart="EliminarRequest", namespace="https://t4is.uv.mx/saludos")
     @ResponsePayload
-    public EliminarResponse  Eliminar(@RequestPayload EliminarRequest indice){
+    public EliminarResponse  Eliminar(@RequestPayload EliminarRequest posicion){
         EliminarResponse respuesta = new EliminarResponse();
-        if(!estaVacia(myArray, indice.getIndice())){
-            myArray[indice.getIndice()] = null;
+        if(!estaVacia(myArray, posicion.getPosicion())){
+            myArray[posicion.getPosicion()] = null;
             respuesta.setRespuesta("Saludo eliminado");
         }
 
