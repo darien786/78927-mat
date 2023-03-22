@@ -45,8 +45,6 @@ public class EndPoint{
         BuscarResponse respuesta = new BuscarResponse();
         if(!estaVacia(myArray,posicion.getPosicion())){
             respuesta.setRespuesta("Hola " + myArray[posicion.getPosicion()].toString() + ", mucho gusto");
-        }else if(estaVacia(myArray, 0)){
-            respuesta.setRespuesta("La lista de saludos esta vacia");
         }else{
             respuesta.setRespuesta("No se encontro");    
         }
