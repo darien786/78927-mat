@@ -88,7 +88,7 @@ public class EndPoint{
         saludador.setNombre(peticion.getNombre());
         iSaludador.save(saludador);
 
-        respuesta.setRespuesta("Saludo Modificado");
+        respuesta.setRespuesta("Nombre modificado a: " + saludador.getNombre());
     
     }else{
         respuesta.setRespuesta("No se encontro");
