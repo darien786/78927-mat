@@ -1,4 +1,4 @@
-package mx.uv.practica04;
+package mx.uv.crudUV;
 
 import org.springframework.data.repository.CrudRepository;
 
