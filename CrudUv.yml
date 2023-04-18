@@ -1,0 +1,87 @@
+version: '3.3'
+services:
+  cambios:
+    image: rrojano/jdk8
+    volumes:
+    - ./app:/app
+    ports:
+    - 8082:8080
+    environment:
+     MYSQL_HOST: mysql
+    command:
+    - java
+    - -jar
+    - /app/cambios-0.0.1-SNAPSHOT.jar
+    depends_on:
+    - mysql
+    links:
+    - mysql
+    restart: always
+    
+  bajas:
+    image: rrojano/jdk8
+    volumes:
+    - ./app:/app
+    ports:
+    - 8083:8080
+    environment:
+     MYSQL_HOST: mysql
+    command:
+    - java
+    - -jar
+    - /app/bajas-0.0.1-SNAPSHOT.jar
+    depends_on:
+    - mysql
+    links:
+    - mysql
+    restart: always
+    
+  altas:
+    image: rrojano/jdk8
+    volumes:
+    - ./app:/app
+    ports:
+    - 8081:8080
+    environment:
+     MYSQL_HOST: mysql
+    command:
+    - java
+    - -jar
+    - /app/altas-0.0.1-SNAPSHOT.jar
+    depends_on:
+    - mysql
+    links:
+    - mysql
+    restart: always
+  
+  mostrar:
+    image: rrojano/jdk8
+    volumes:
+    - ./app:/app
+    ports:
+    - 8084:8080
+    environment:
+     MYSQL_HOST: mysql
+    command:
+    - java
+    - -jar
+    - /app/mostrar-0.0.1-SNAPSHOT.jar
+    depends_on:
+    - mysql
+    links:
+    - mysql
+    restart: always
+
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    environment:
+      - MYSQL_USER=yo
+      - MYSQL_PASSWORD=123456
+      - MYSQL_DATABASE=escuela
+      - MYSQL_ROOT_PASSWORD=zkorpio12
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"
