@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +19,6 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-
 
 	@RequestMapping("/")
 	public String name1() {
@@ -66,4 +68,47 @@ public class DemoApplication {
 		return "mensaje de tipo post";
 	}
 
+	private Productos personita;
+
+
+	@RequestMapping(value ="/productos/{nombre}", method= RequestMethod.GET)
+	public String insert(@PathVariable String nombre){
+
+		return "hola "+ nombre;
+	}
+
+	
+	@RequestMapping(value ="/productos/{nombre}", method= RequestMethod.POST)
+	public String insert2(@PathVariable String nombre){
+
+		return "hola "+ nombre;
+	}
+
+
+	@RequestMapping(value = "/productos", method = RequestMethod.POST)
+	public String saludaPost(){
+
+		return "hola";
+	}
+
+	
+	@RequestMapping(value = "/productos", method = RequestMethod.POST)
+	public String saludaPost2(@RequestBody Productos persona){
+		personita = persona;
+		return "Hola" + persona.getNombre() + ", Cantidad: " + persona.getCantidad();
+	}
+
+
+	@GetMapping("/productos/{nombre}/{cantidad}")
+	public void subirProducto(@PathVariable("nombre") String nombre, @PathVariable ("cantidad") int cantidad){
+	 	
+		System.out.println(nombre);
+		System.out.println(cantidad);
+	 }
+
+
+	@RequestMapping("/obtener") 
+	public Productos obtener() {
+		return personita;
+	}
 }
