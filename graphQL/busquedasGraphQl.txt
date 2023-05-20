@@ -1,0 +1,55 @@
+Muestra todas las categorias
+
+query{
+  listarCategorias{
+  	id,nombre
+    } 
+}
+
+Buscar una categoria por Id
+
+query{
+  listarCategoriaPorId(id : 1){
+    nombre
+  }
+}
+
+
+Guarda un producto y muestra los datos
+
+mutation{
+  guardarProducto(productoRequest:{
+    nombre:"P20",
+    precio: 4080,
+    cantidad: 2,
+    categoriaId:1
+  }){
+    id,nombre,precio,cantidad,categoria{
+      nombre
+    }
+  }
+}
+
+
+Elimina un producto
+
+mutation{
+  eliminarProducto(id:"5af5f1f9-f5dc-4810-8d98-68a017aa1541")
+}
+
+
+
+buscar con variables
+
+query($id:String){
+  listarProductoPorId(id:$id){
+    nombre,precio,categoria{
+      nombre
+    }
+  }
+}
+
+variables
+{
+	"id":"jajajaj"
+}

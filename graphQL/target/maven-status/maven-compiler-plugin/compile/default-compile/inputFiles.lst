@@ -1,0 +1,8 @@
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Repository/ProductoRepository.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/GraphQlApplication.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Repository/CategoriaReposiroty.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/dto/ProductoRequest.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Exceptions/GraphQLExcepcionHandler.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Entitys/Categoria.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Web/ProductoGraphQLController.java
+/home/subaru/Escritorio/graphQL/src/main/java/mx/uv/graphQL/Entitys/Producto.java
